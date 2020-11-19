@@ -1,0 +1,35 @@
+.menu-toggle {
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  padding-top: 70px;
+  z-index: -1;
+  box-shadow: 5px 0px 15px -1px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  ul {
+    padding: 10px;
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+      border-radius: 100px;
+      transition: all 0.5s;
+      &:active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      a {
+        text-decoration: none;
+        color: #dddd;
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
+    }
+  }
+}
+
+.menu-toggle-show {
+  transform: translateX(0%) !important;
+}
