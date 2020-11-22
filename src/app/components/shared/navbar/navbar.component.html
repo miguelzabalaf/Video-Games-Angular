@@ -1,17 +1,17 @@
 <nav class="nav">
   <div class="nav__container container">
-    <div (click)="menuToogle()" class="nav__container--menu-toggle">
+    <div  (click)="menuToogle()" class="nav__container--menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-    <div class="nav__container--logo"  [ngClass]="{'hideLogo': searchIsActivated}">
-
-    </div>
+    <a [routerLink]="['']" class="nav__container--logo"  [ngClass]="{'hideLogo': searchIsActivated}">
+      <img src="./../../../assets/logo.svg" alt="Logo">
+    </a>
     <div class="nav__container--menu">
       <ul>
-        <li *ngFor="let option of menuOptions">
-          <a href="#">{{ option }}</a>
+        <li routerLinkActive="nav__container--menu active" [routerLinkActiveOptions]="{exact:true}"  *ngFor="let option of menuOptions">
+          <a [routerLink]="[option.path]" >{{ option.name }}</a>
         </li>
       </ul>
     </div>

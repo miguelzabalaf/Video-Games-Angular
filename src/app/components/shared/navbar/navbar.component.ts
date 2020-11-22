@@ -10,10 +10,19 @@ export class NavbarComponent implements OnInit {
   searchIsActivated = false;
   menuToggleIsActivated =  false;
 
-  menuOptions: Array<string> = [
-    "Home",
-    "Heroes",
-    "Github"
+  menuOptions: any[]= [
+    {
+      name: "Home",
+      path: ""
+    },
+    {
+      name: "Video Games",
+      path: "video-games"
+    },
+    {
+      name: "About",
+      path: "about"
+    }
   ];
 
   constructor() { }

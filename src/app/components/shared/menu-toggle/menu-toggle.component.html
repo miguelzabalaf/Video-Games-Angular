@@ -1,7 +1,7 @@
 <menu [ngClass]="{'menu-toggle-show': isMenuToggleActivated}" class="menu-toggle">
   <ul>
     <li (click)="navigateToggle()" class="menu-toggle__option" *ngFor="let option of options">
-      <a href="#">{{ option }}</a>
+      <a [routerLink]="[option.path]" routerLinkActive="router-link-active" >{{ option.name }}</a>
     </li>
   </ul>
 </menu>

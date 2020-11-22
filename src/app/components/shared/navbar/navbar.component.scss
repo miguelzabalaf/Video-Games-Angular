@@ -1,6 +1,13 @@
 .nav {
   height: 70px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #1a1d29;
+  z-index: 100;
   &__container {
     height: 100%;
     display: flex;
@@ -14,7 +21,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      padding: 5px 0;
+      padding: 7.5px 0;
       border-radius: 50%;
       transition: all 0.5s;
       cursor: pointer;
@@ -27,25 +34,30 @@
       &:active {
         background-color: rgba(255, 255, 255, 0.1);
       }
-      .bar {
+      & > * {
         border: 0.5px solid #dddd;
         width: 55%;
-        &:hover {
-          border: 1px solid #d4ffff;
-        }
+      }
+      &:hover > * {
+        border: 1px solid #d4ffff;
       }
     }
     &--logo {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       margin-right: 10px;
       flex-shrink: 0;
-      border-radius: 50%;
-      background: rgba(221, 221, 221, 0.5);
       transition: all 0.5s;
+      img {
+        width: 100%;
+      }
     }
     &--menu {
       width: auto;
+      .active {
+        transition: all 0.5s;
+        color: #d4ffff;
+      }
       ul {
         height: 100%;
         display: flex;
@@ -53,9 +65,14 @@
         li {
           list-style: none;
           margin-right: 10px;
-          padding: 5px 10px;
           cursor: pointer;
           a {
+            padding: 5px 10px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             color: inherit;
           }
@@ -70,14 +87,15 @@
       .search {
         width: auto;
         overflow: hidden;
-        transition: all 0.5s;
+        transition: all 0.3s;
         input {
           width: 0px;
-          border: 1px solid rgba(221, 221, 221, 0.5);
+          // border: 1px solid rgba(221, 221, 221, 0.5);
+          border: none;
           outline: none;
           background-color: #1a1d29;
           font-family: "Montserrat", sans-serif;
-          filter: brightness(0.75);
+          filter: brightness(0.5);
           height: 40px;
           border-radius: 40px;
           margin-right: 10px;

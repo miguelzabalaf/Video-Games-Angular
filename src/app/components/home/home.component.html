@@ -1,0 +1,40 @@
+<div class="home">
+  <div class="home__hero">
+    <div class="home__hero--title">
+      <div class="title">
+        <h1>Are you ready <br> for this <span>season</span>?</h1>
+      </div>
+      <button [routerLink]="['/video-games']" class="button">
+        Lets go!
+      </button>
+    </div>
+    <div class="home__hero--video-games">
+      <div class="games">
+        <h2>Most Popular</h2>
+        <div class="games__container">
+          <div *ngFor="let i of [1,1,1,1,1]" class="games__container--game">
+            <picture class="image">
+              <img src="https://as.com/meristation/imagenes/2020/09/30/noticias/1601498876_582320_1601498920_noticia_normal.jpg" alt="">
+            </picture>
+            <div class="information">
+              <div class="title">
+                <h3>Spider-man - The Best Game</h3>
+              </div>
+              <div class="company">
+                <p>SONY</p>
+              </div>
+              <div class="abstract">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sunt nihil aliquid sed ratione laborum nemo natus provident! At eaque fugiat tenetur quaerat a nostrum dolores perspiciatis explicabo iste ad.</p>
+              </div>
+              <div class="genres">
+                <div class="genre"><span>Action</span></div>
+                <div class="genre"><span>RPG</span></div>
+                <div class="genre"><span>Fantasy</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

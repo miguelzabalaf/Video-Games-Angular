@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class MenuToggleComponent implements OnInit {
 
-  @Input() options: Array<string>;
+  @Input() options: Array<any>;
   @Input() isMenuToggleActivated: boolean;
   @Output() menuToogleChange = new EventEmitter<boolean>();
 
