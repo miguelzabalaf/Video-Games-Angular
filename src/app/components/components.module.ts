@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MenuToggleComponent } from './shared/menu-toggle/menu-toggle.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { GameCardComponent } from './game-card/game-card.component';
 
 
 
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     NavbarComponent,
     MenuToggleComponent,
+    GameCardComponent,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     NavbarComponent,
     MenuToggleComponent,
+    GameCardComponent
   ]
 })
 export class ComponentsModule { }

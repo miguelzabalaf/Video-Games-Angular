@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from '../../../core/interfaces';
+import { MENU } from '../../../core/constants';
 
 @Component({
   selector: 'app-navbar',
@@ -10,20 +12,7 @@ export class NavbarComponent implements OnInit {
   searchIsActivated = false;
   menuToggleIsActivated =  false;
 
-  menuOptions: any[]= [
-    {
-      name: "Home",
-      path: ""
-    },
-    {
-      name: "Video Games",
-      path: "video-games"
-    },
-    {
-      name: "About",
-      path: "about"
-    }
-  ];
+  menuOptions: MenuItem[] = MENU;
 
   constructor() { }
 
