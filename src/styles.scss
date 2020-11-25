@@ -19,3 +19,19 @@ body {
   max-width: 1200px;
   padding: 0 10px;
 }
+
+.animate-content {
+  animation: AnimationPage ease-in-out 1s;
+}
+
+@keyframes AnimationPage {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
