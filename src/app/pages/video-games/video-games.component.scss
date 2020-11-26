@@ -7,5 +7,27 @@
     background-size: cover;
     background-color: grey;
     animation: AnimationImageLoading ease-in-out alternate infinite 0.75s;
+    position: relative;
+    &--title {
+      color: #fff;
+      position: absolute;
+      height: 105px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 25px 10px;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        display: block;
+        width: 100%;
+        flex-shrink: 0;
+        text-shadow: 0px 2.5px rgba(0, 0, 0, 0.5);
+      }
+    }
   }
 }

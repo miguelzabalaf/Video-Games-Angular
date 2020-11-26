@@ -12,6 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: AnimationImageLoading ease-in-out alternate infinite 0.75s;
     &--title {
       position: absolute;
       z-index: 5;
@@ -54,7 +55,7 @@
           border: none;
           background-color: #d4ffff;
           padding: 20px 30px;
-          border-radius: 15px;
+          border-radius: 5px;
           outline: none;
           color: #005555;
           font-family: "Montserrat", sans-serif;
@@ -75,7 +76,7 @@
           background-color: rgba(214, 255, 255, 0.35);
           backdrop-filter: blur(2px);
           padding: 20px 30px;
-          border-radius: 15px;
+          border-radius: 5px;
           outline: none;
           color: #fff;
           font-family: "Montserrat", sans-serif;
