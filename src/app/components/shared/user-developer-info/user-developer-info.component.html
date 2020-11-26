@@ -1,0 +1,21 @@
+<div [ngClass]="{'showDeveloperInfoBackground': isUserDeveloperInfoToggleActivated}" class="user-developer-info" (click)="dismissUserDeveloperInfo()">
+
+  <div class="developer" [ngClass]="{'showDeveloperInfo': isUserDeveloperInfoToggleActivated}">
+    <div class="developer__image">
+      <img src="../../../../assets/images/miguelzabalaf.jpeg" alt="">
+    </div>
+    <div class="developer__info">
+      <div class="developer__info--name">
+        <h3>Miguel Zabala Figueroa</h3>
+      </div>
+      <div class="developer__info--specialism">
+        <p>Frontend Developer</p>
+      </div>
+      <div class="developer__info--networks">
+        <a href="https://github.com/miguelzabalaf" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/miguelzabalaf/" target="_blank">Linkedin</a>
+      </div>
+    </div>
+  </div>
+
+</div>

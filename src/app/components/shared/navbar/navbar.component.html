@@ -36,14 +36,20 @@
 
     </div>
     <div class="nav__container--info">
-      <div class="image">
+      <div (click)="userDeveloperInfoToggle()" class="image">
         <img src="../../../../assets/images/miguelzabalaf.jpeg" alt="">
       </div>
     </div>
   </div>
 </nav>
+
 <app-menu-toggle
   [options]="menuOptions"
   [isMenuToggleActivated]="menuToggleIsActivated"
   (menuToogleChange)="menuStateChanged($event)"
 ></app-menu-toggle>
+
+<app-user-developer-info
+  [isUserDeveloperInfoToggleActivated]="userDeveloperInfoActivated"
+  (userDeveloperInfoToggleChange)="userDeveloperInfoChanged($event)"
+></app-user-developer-info>

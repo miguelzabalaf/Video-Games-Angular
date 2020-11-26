@@ -1,0 +1,100 @@
+.user-developer-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 6;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+
+  .developer {
+    background-color: #13151d;
+    border-radius: 15px;
+    height: 100px;
+    position: absolute;
+    max-width: 350px;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(250%) scale(0.5);
+
+    display: flex;
+    &__image {
+      flex: 1.25;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.15);
+      }
+    }
+    &__info {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 10px 5px;
+      & > * {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      &--name {
+        h3 {
+          position: absolute;
+          right: 0;
+          left: 0;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-align: start;
+          transition: all 0.3s;
+        }
+      }
+      &--specialism {
+        font-size: 12px;
+        font-weight: 300;
+        opacity: 0.75;
+      }
+      &--networks {
+        a {
+          padding: 5px 5px;
+          border-radius: 1px;
+          background-color: rgba(0, 0, 0, 0.25);
+          text-decoration: none;
+          color: #d4ffff;
+          font-size: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.showDeveloperInfoBackground {
+  transition: all 0.3s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.showDeveloperInfo {
+  transition: all 0.3s ease-in;
+  transform: translateY(0%) scale(1) !important;
+  opacity: 1;
+}

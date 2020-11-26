@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   searchIsActivated = false;
   menuToggleIsActivated =  false;
+  userDeveloperInfoActivated = false;
 
   menuOptions: MenuItem[] = MENU;
 
@@ -27,8 +28,16 @@ export class NavbarComponent implements OnInit {
     this.menuToggleIsActivated = !this.menuToggleIsActivated
   }
 
+  userDeveloperInfoToggle() {
+    this.userDeveloperInfoActivated = !this.userDeveloperInfoActivated
+  }
+
   menuStateChanged(newState: boolean) {
     return this.menuToggleIsActivated = newState
+  }
+
+  userDeveloperInfoChanged(newState: boolean) {
+    return this.userDeveloperInfoActivated = newState;
   }
 
 }
