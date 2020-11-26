@@ -3,21 +3,24 @@
   bottom: 0;
   right: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   z-index: 6;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
+  border: 1px solid red;
+  height: 100vh;
   &__container {
     padding-top: 70px;
     box-shadow: 5px 0px 15px -1px rgba(0, 0, 0, 0.55);
     background-color: #1a1d29;
     width: 70vw;
     height: 100vh;
+    position: sticky;
     top: 0;
     bottom: 0;
+    // height: 100vh;
     transition: all 0.3s ease-in-out;
     transform: translateX(-100%);
-    position: absolute;
     display: flex;
     z-index: 7;
     ul {
