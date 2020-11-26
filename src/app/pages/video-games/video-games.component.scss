@@ -53,6 +53,8 @@
   .video-games {
     &__hero {
       &--title {
+        height: 85px;
+        padding: 25px 10px 0px 10px;
         .title {
           width: 60%;
           h1 {

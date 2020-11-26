@@ -55,7 +55,7 @@
           border: none;
           background-color: #d4ffff;
           padding: 20px 30px;
-          border-radius: 5px;
+          border-radius: 10px;
           outline: none;
           color: #005555;
           font-family: "Montserrat", sans-serif;
@@ -76,7 +76,7 @@
           background-color: rgba(214, 255, 255, 0.35);
           backdrop-filter: blur(2px);
           padding: 20px 30px;
-          border-radius: 5px;
+          border-radius: 10px;
           outline: none;
           color: #fff;
           font-family: "Montserrat", sans-serif;
@@ -170,14 +170,14 @@
             width: 125px;
             padding: 10px 20px;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 600;
             transition: all 0.3s;
           }
           &__button-secondary {
             width: 125px;
             padding: 15px 15px;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 600;
             transition: all 0.3s;
             text-align: center;
           }
