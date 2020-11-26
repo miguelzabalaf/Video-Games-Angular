@@ -1,2 +1,11 @@
 .video-games {
+  &__hero {
+    height: 60vh;
+    background-image: url("./../../../assets/images/video-games-wallpaper.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    animation: AnimationImageLoading ease-in-out alternate infinite 0.75s;
+  }
 }

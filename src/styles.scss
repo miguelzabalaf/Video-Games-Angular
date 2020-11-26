@@ -21,7 +21,7 @@ body {
 }
 
 .animate-content {
-  animation: AnimationPage ease-in-out 0.3s;
+  animation: AnimationPage ease-in-out 0.5s;
 }
 
 @keyframes AnimationPage {
@@ -33,5 +33,14 @@ body {
   to {
     opacity: 1;
     filter: blur(0px);
+  }
+}
+
+@keyframes AnimationImageLoading {
+  from {
+    background-color: #1a1d29;
+  }
+  to {
+    background-color: #222535;
   }
 }
