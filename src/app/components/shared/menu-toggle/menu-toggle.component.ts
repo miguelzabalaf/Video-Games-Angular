@@ -20,4 +20,5 @@ export class MenuToggleComponent implements OnInit {
     this.menuToogleChange.emit(!this.isMenuToggleActivated)
   }
 
+
 }
