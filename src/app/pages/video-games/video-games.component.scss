@@ -22,11 +22,48 @@
       flex-shrink: 0;
       justify-content: space-between;
       align-items: center;
-      h1 {
-        display: block;
-        width: 100%;
-        flex-shrink: 0;
-        text-shadow: 0px 2.5px rgba(0, 0, 0, 0.5);
+      .title {
+        width: 70%;
+        h1 {
+          display: block;
+          flex-shrink: 0;
+          text-shadow: 0px 2.5px rgba(0, 0, 0, 0.5);
+          //
+          max-width: 90%;
+          position: relative;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-align: start;
+          transition: all 0.3s;
+        }
+        small {
+          opacity: 0.5;
+        }
+      }
+      .call-to-action {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-games {
+    &__hero {
+      &--title {
+        .title {
+          width: 60%;
+          h1 {
+            font-size: 20px;
+          }
+          small {
+            font-size: 12px;
+          }
+        }
+        .call-to-action {
+        }
       }
     }
   }
