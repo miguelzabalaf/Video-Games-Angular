@@ -1,7 +1,7 @@
 .video-games {
   &__hero {
     height: 60vh;
-    background-image: url("./../../../assets/images/video-games-wallpaper.jpg");
+    background-image: url("/assets/images/video-games-wallpaper.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,6 +44,32 @@
         }
       }
       .call-to-action {
+      }
+    }
+  }
+  &__top-games {
+    margin-top: 25px;
+    &--title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    &--games {
+      border-radius: 15px;
+      display: flex;
+      overflow: auto;
+      padding: 10px;
+      max-width: 1200px;
+      margin: auto;
+      .game-container {
+        margin-right: 15px;
+        .game {
+          border-radius: 15px;
+          width: 300px;
+          height: 150px;
+          flex-shrink: 0;
+          background-color: rgb(65, 65, 65);
+        }
       }
     }
   }

@@ -20,6 +20,14 @@ body {
   padding: 0 10px;
 }
 
+.subtitle {
+  font-size: 24px;
+}
+
+.icon {
+  width: 40px;
+}
+
 .animate-content {
   animation: AnimationPage ease-in-out 0.5s;
 }
@@ -48,6 +56,12 @@ body {
   .mz-btn-secondary {
     width: 100px;
     font-weight: 300;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .icon {
+    width: 25px;
   }
 }
 

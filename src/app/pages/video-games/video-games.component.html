@@ -12,4 +12,16 @@
     </div>
   </div>
 
+  <section class="video-games__top-games">
+    <div class="video-games__top-games--title container">
+      <h2 class="subtitle">Top Games</h2>
+      <img class="icon" src="/assets/icons/icon-top.svg" alt="">
+    </div>
+    <div class="video-games__top-games--games">
+      <div *ngFor="let i of [].constructor(6)" class="game-container">
+        <div class="game"></div>
+      </div>
+    </div>
+  </section>
+
 </div>
