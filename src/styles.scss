@@ -54,12 +54,13 @@ body {
 @keyframes AnimationPage {
   from {
     opacity: 0;
-    filter: blur(5px);
+    filter: hue-rotate(-100deg);
   }
 
   to {
     opacity: 1;
-    filter: blur(0px);
+    // filter: blur(0px);
+    filter: hue-rotate(0deg);
   }
 }
 

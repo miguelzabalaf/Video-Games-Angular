@@ -5,9 +5,9 @@
   left: 0;
   bottom: 0;
   z-index: 6;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(1px);
+  // backdrop-filter: blur(1px);
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
