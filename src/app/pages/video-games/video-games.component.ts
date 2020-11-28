@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
+import { VideoGame } from '../../core/interfaces';
 
 @Component({
   selector: 'app-video-games',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoGamesComponent implements OnInit {
 
-  constructor() { }
+  VideoGames: VideoGame[] = [];
+
+  constructor( private heroService: HeroesService ) { }
 
   ngOnInit(): void {
+    this.VideoGames = this.heroService.getVideoGames();
+    console.log(this.VideoGames)
   }
 
 }
