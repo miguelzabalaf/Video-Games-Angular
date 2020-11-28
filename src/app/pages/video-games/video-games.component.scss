@@ -1,4 +1,7 @@
 .video-games {
+  section {
+    margin-bottom: 50px;
+  }
   &__hero {
     height: 60vh;
     background-image: url("/assets/images/video-games-wallpaper.jpg");
@@ -70,6 +73,18 @@
             margin-left: 0px;
           }
         }
+      }
+    }
+  }
+  &__news {
+    &--new {
+      margin: auto;
+      max-width: 1200px;
+      img {
+        margin: auto;
+        width: 100%;
+        object-fit: cover;
+        margin-top: -25px;
       }
     }
   }
