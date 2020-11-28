@@ -28,6 +28,17 @@ body {
   width: 40px;
 }
 
+.container-scroll {
+  &::-webkit-scrollbar {
+    width: 2.5px; /* Tamaño del scroll en vertical */
+    height: 5px; /* Tamaño del scroll en horizontal */
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.25);
+    border-radius: 4px;
+  }
+}
+
 .animate-content {
   animation: AnimationPage ease-in-out 0.5s;
 }
@@ -62,6 +73,11 @@ body {
   }
   .icon {
     width: 25px;
+  }
+  .container-scroll {
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

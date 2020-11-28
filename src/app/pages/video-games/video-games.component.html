@@ -17,9 +17,15 @@
       <h2 class="subtitle">Top Games</h2>
       <img class="icon" src="/assets/icons/icon-top.svg" alt="">
     </div>
-    <div class="video-games__top-games--games">
+    <div class="video-games__top-games--games container-scroll">
       <div *ngFor="let i of [].constructor(6)" class="game-container">
-        <div class="game"></div>
+        <div class="game">
+          <img class="game__image" src="/assets/images/hero-wallpaper.jpg" alt="">
+          <div class="game__info">
+            <h3>Spiderman</h3>
+            <small>SONY</small>
+          </div>
+        </div>
       </div>
     </div>
   </section>
