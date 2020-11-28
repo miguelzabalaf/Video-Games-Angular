@@ -15,7 +15,6 @@ export class VideoGamesComponent implements OnInit {
 
   ngOnInit(): void {
     this.videoGames = this.heroService.getVideoGames();
-    console.log(this.videoGames)
   }
 
 }
