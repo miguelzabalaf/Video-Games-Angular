@@ -77,14 +77,16 @@
     }
   }
   &__news {
-    &--new {
+    &--container {
       margin: auto;
       max-width: 1200px;
-      img {
-        margin: auto;
-        width: 100%;
-        object-fit: cover;
-        margin-top: -25px;
+      display: flex;
+      .new {
+        flex: 1;
+        padding: 15px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -106,6 +108,14 @@
           }
         }
         .call-to-action {
+        }
+      }
+    }
+    &__news {
+      &--container {
+        display: block;
+        .new {
+          padding: 0px;
         }
       }
     }
