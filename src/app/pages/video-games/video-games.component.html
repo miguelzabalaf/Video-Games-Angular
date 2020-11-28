@@ -18,16 +18,13 @@
       <img class="icon" src="/assets/icons/icon-top.svg" alt="">
     </div>
     <div class="video-games__top-games--games container-scroll">
-      <div *ngFor="let videoGame of VideoGames" class="game-container">
+      <div *ngFor="let videoGame of videoGames" class="game-container">
         <div class="game">
-          <img class="game__image" src="/assets/video-games/{{videoGame.image_url}}.jpg" alt="">
-          <div class="game__info">
-            <h3>{{ videoGame.title }}</h3>
-            <small>{{ videoGame.company }}</small>
-          </div>
+          <app-game-card [videoGame]="videoGame"></app-game-card>
         </div>
       </div>
     </div>
   </section>
+
 
 </div>

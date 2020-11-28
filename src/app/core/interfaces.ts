@@ -13,7 +13,7 @@ export interface VideoGame {
   tags: string[],
   release: String,
   score: number,
-  platform: string[],
+  platforms: string[],
   available: boolean,
   offer: boolean,
   deduction?: number,

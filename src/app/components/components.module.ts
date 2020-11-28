@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MenuToggleComponent } from './shared/menu-toggle/menu-toggle.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
-import { GameCardComponent } from './game-card/game-card.component';
+import { GameCardHomeComponent } from './game-card-home/game-card-home.component';
 import { UserDeveloperInfoComponent } from './shared/user-developer-info/user-developer-info.component';
+import { GameCardComponent } from './game-card/game-card.component';
 
 
 
@@ -12,8 +13,9 @@ import { UserDeveloperInfoComponent } from './shared/user-developer-info/user-de
   declarations: [
     NavbarComponent,
     MenuToggleComponent,
-    GameCardComponent,
+    GameCardHomeComponent,
     UserDeveloperInfoComponent,
+    GameCardComponent,
   ],
   imports: [
     CommonModule,
@@ -22,8 +24,9 @@ import { UserDeveloperInfoComponent } from './shared/user-developer-info/user-de
   exports: [
     NavbarComponent,
     MenuToggleComponent,
-    GameCardComponent,
-    UserDeveloperInfoComponent
+    GameCardHomeComponent,
+    UserDeveloperInfoComponent,
+    GameCardComponent
   ]
 })
 export class ComponentsModule { }

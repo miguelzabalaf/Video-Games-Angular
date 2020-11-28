@@ -9,13 +9,13 @@ import { VideoGame } from '../../core/interfaces';
 })
 export class VideoGamesComponent implements OnInit {
 
-  VideoGames: VideoGame[] = [];
+  videoGames: VideoGame[] = [];
 
   constructor( private heroService: HeroesService ) { }
 
   ngOnInit(): void {
-    this.VideoGames = this.heroService.getVideoGames();
-    console.log(this.VideoGames)
+    this.videoGames = this.heroService.getVideoGames();
+    console.log(this.videoGames)
   }
 
 }
