@@ -19,7 +19,7 @@
 
       <!-- Search -->
       <div class="search">
-        <input [ngClass]="{'searchActivated': searchIsActivated, 'search-transparent': activeRoute === 'video-game'}" type="text" name="" id="">
+        <input #search [ngClass]="{'searchActivated': searchIsActivated, 'search-transparent': activeRoute === 'video-game'}" type="text" name="" >
       </div>
     <!-- Search icon -->
     <div (click)="searchToggle()" class="icon"  [ngClass]="{'searchButtonIconOn': searchIsActivated}">

@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input, OnInit } from '@angular/core';
+import { Component, DoCheck, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from '../../../core/interfaces';
 import { MENU } from '../../../core/constants';
 
@@ -10,6 +10,8 @@ import { MENU } from '../../../core/constants';
 export class NavbarComponent implements OnInit, DoCheck {
 
   @Input() activeRoute: string;
+
+  @ViewChild("search") searchInput: ElementRef;
 
   searchIsActivated = false;
   menuToggleIsActivated =  false;
@@ -30,6 +32,13 @@ export class NavbarComponent implements OnInit, DoCheck {
 
   searchToggle(): void {
     this.searchIsActivated = !this.searchIsActivated
+
+    this.searchIsActivated
+      ?
+    this.searchInput.nativeElement.focus()
+      :
+    this.searchInput.nativeElement.blur()
+    this.searchInput.nativeElement.value=""
   }
 
   menuToogle(): void {
