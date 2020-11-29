@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 import { VideoGame } from '../../core/interfaces';
 
@@ -10,12 +10,6 @@ import { VideoGame } from '../../core/interfaces';
 export class VideoGamesComponent implements OnInit {
 
   videoGames: VideoGame[] = [];
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll() {
-    const pos = (document.documentElement.scrollTop || document.body.scrollTop);
-    console.log(pos);
-  }
 
   constructor( private heroService: HeroesService ) { }
 
