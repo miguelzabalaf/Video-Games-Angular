@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoGame } from '../../core/interfaces';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  mostPopulars: VideoGame[];
+
+  constructor( private heroService: HeroesService ) { }
 
   ngOnInit(): void {
+    this.mostPopulars = this.heroService.getVideoGames();
   }
 
 }
