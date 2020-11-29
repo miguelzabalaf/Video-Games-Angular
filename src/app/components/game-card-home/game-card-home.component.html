@@ -1,6 +1,6 @@
 <div class="game-card-home">
   <picture class="game-card-home__image">
-    <img src="/assets/video-games/{{videoGame.image_url}}.jpg" alt="">
+    <img src="/assets/video-games/{{ videoGame.image_url }}.jpg" alt="">
   </picture>
   <div class="game-card-home__information">
     <div class="game-card-home__information--title">
@@ -10,10 +10,10 @@
       <p>{{videoGame.company}}</p>
     </div>
     <div class="game-card-home__information--abstract">
-      <p>{{videoGame.description}}</p>
+      <p>{{ videoGame.description }}</p>
     </div>
     <div class="game-card-home__information--genres">
-      <div *ngFor="let tag of videoGame.tags" class="genre"><span>{{tag}}</span></div>
+      <div *ngFor="let tag of videoGame.tags" class="genre"><span>{{ tag }}</span></div>
     </div>
   </div>
 </div>

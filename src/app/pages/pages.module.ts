@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { VideoGamesComponent } from './video-games/video-games.component';
 import { ComponentsModule } from '../components/components.module';
 import { RouterModule } from '@angular/router';
+import { VideoGameComponent } from './video-game/video-game.component';
 
 
 
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     AboutComponent,
     VideoGamesComponent,
+    VideoGameComponent,
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     HomeComponent,
     AboutComponent,
-    VideoGamesComponent
+    VideoGamesComponent,
+    VideoGameComponent
   ]
 })
 export class PagesModule { }

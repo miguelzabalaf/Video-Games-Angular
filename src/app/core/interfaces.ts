@@ -5,6 +5,7 @@ export interface MenuItem {
 }
 
 export interface VideoGame {
+  id: number,
   title: string,
   company: string,
   description: string,

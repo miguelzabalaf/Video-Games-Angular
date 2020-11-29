@@ -1,0 +1,24 @@
+<div class="video-game animate-content">
+  <div class="video-game__hero">
+    <video [muted]="'muted'" [src]="videoGame.video_url" autoplay loop="loop" muted="muted"></video>
+    <div class="video-game__hero--header container">
+      <div class="info">
+        <div class="info__image">
+          <img src="/assets/video-games/{{ videoGame.image_url }}.jpg" alt="">
+        </div>
+        <div class="info__information">
+          <h1>{{ videoGame.title }}</h1>
+          <p>{{ videoGame.company }}</p>
+          <div class="info__information--tags">
+            <span class="tag" *ngFor="let tag of videoGame.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="platforms">
+        <div class="platforms__platform" *ngFor="let platform of videoGame.platforms">
+          <img src="/assets/platforms/{{ platform }}.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

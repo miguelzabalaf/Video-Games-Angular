@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../../services/heroes.service';
+import { VideoGamesService } from '../../services/video-games.service';
 import { VideoGame } from '../../core/interfaces';
 
 @Component({
@@ -11,10 +11,10 @@ export class VideoGamesComponent implements OnInit {
 
   videoGames: VideoGame[] = [];
 
-  constructor( private heroService: HeroesService ) { }
+  constructor( private videoGameService: VideoGamesService ) { }
 
   ngOnInit(): void {
-    this.videoGames = this.heroService.getVideoGames();
+    this.videoGames = this.videoGameService.getVideoGames();
   }
 
 }
