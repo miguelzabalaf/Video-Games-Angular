@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VideoGame } from '../../core/interfaces';
 import { VideoGamesService } from '../../services/video-games.service';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-video-game',
   templateUrl: './video-game.component.html',
@@ -15,7 +15,8 @@ export class VideoGameComponent implements OnInit {
   videoGame: VideoGame;
 
   constructor( private videoGamesService: VideoGamesService,
-               private activatedRoute: ActivatedRoute) {
+               private activatedRoute: ActivatedRoute,
+               private _location: Location) {
 
                  this.activatedRoute.params.subscribe( params => {
                   this.videoGameId = params['id']
@@ -27,5 +28,8 @@ export class VideoGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goBack() {
+    this._location.back()
+  }
 
 }
