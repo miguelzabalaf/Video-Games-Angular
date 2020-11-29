@@ -15,13 +15,11 @@ export class VideoGameComponent implements OnInit {
   videoGame: VideoGame;
 
   constructor( private videoGamesService: VideoGamesService,
-               private activatedRoute: ActivatedRoute ) {
+               private activatedRoute: ActivatedRoute) {
 
                  this.activatedRoute.params.subscribe( params => {
                   this.videoGameId = params['id']
                   this.videoGame = this.videoGamesService.getVideoGameById(this.videoGameId);
-                  console.log('video-game: ', this.videoGame)
-                  console.log(this.videoGameId)
                  });
 
                 }

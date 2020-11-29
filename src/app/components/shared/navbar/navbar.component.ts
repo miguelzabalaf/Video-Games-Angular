@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, Input, OnInit } from '@angular/core';
 import { MenuItem } from '../../../core/interfaces';
 import { MENU } from '../../../core/constants';
 
@@ -7,7 +7,9 @@ import { MENU } from '../../../core/constants';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, DoCheck {
+
+  @Input() activeRoute: string;
 
   searchIsActivated = false;
   menuToggleIsActivated =  false;
@@ -15,28 +17,34 @@ export class NavbarComponent implements OnInit {
 
   menuOptions: MenuItem[] = MENU;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
-  searchToggle() {
+  ngOnInit() {
+
+  }
+
+  ngDoCheck() {
+
+  }
+
+  searchToggle(): void {
     this.searchIsActivated = !this.searchIsActivated
   }
 
-  menuToogle() {
+  menuToogle(): void {
     this.menuToggleIsActivated = !this.menuToggleIsActivated
   }
 
-  userDeveloperInfoToggle() {
+  userDeveloperInfoToggle(): void {
     this.userDeveloperInfoActivated = !this.userDeveloperInfoActivated
   }
 
-  menuStateChanged(newState: boolean) {
+  menuStateChanged(newState: boolean): boolean {
     return this.menuToggleIsActivated = newState
   }
 
-  userDeveloperInfoChanged(newState: boolean) {
+  userDeveloperInfoChanged(newState: boolean): boolean {
     return this.userDeveloperInfoActivated = newState;
   }
 

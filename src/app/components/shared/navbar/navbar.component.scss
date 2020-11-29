@@ -8,6 +8,7 @@
   z-index: 5;
   background-color: #1a1d29;
   z-index: 100;
+  transition: all 1s;
   &__container {
     height: 100%;
     display: flex;
@@ -189,6 +190,14 @@
 .iconHidden {
   transition: all 0.3s;
   transform: scale(0);
+}
+
+.navbar-transparent {
+  background-color: #1a1d2900;
+}
+.search-transparent {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
 }
 
 // MQ

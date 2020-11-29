@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav" [ngClass]="{'navbar-transparent': activeRoute === 'video-game'}">
   <div class="nav__container container">
     <div  (click)="menuToogle()" class="nav__container--menu-toggle">
       <div class="bar"></div>
@@ -19,7 +19,7 @@
 
       <!-- Search -->
       <div class="search">
-        <input [ngClass]="{'searchActivated': searchIsActivated}" type="text" name="" id="">
+        <input [ngClass]="{'searchActivated': searchIsActivated, 'search-transparent': activeRoute === 'video-game'}" type="text" name="" id="">
       </div>
     <!-- Search icon -->
     <div (click)="searchToggle()" class="icon"  [ngClass]="{'searchButtonIconOn': searchIsActivated}">
