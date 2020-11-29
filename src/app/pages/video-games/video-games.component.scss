@@ -117,6 +117,10 @@
         .new {
           padding: 0px;
         }
+        .new:nth-child(2),
+        .new:nth-child(3) {
+          margin-top: -85px;
+        }
       }
     }
   }
